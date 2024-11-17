@@ -4,8 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css">
+        /*属性选择器*/
+        [title="baidu"]
+        {
+            color:blue;
+        }
+         
+        /*后代选择器*/
+        .father p{
+            color:red;
+        }
+        /*子选择器*/
+        .father>son{/*只选择第一层*/
+            color:green;
+        }
+        /*兄弟选择器*/
+        .father+son{
+            color:yellow;
+        }
+        .animal {
+        color: blue;
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        transform: rotate(48deg); /* 旋转 */
+        transition: transform 10s 5s; /* 指定过渡属性、持续时间和延迟 */
+        }
+
+        @keyframes animation1 {
+        0% {
+            transform: rotate(0deg); /* 初始状态 */
+        }
+        50% {
+            transform: rotate(180deg); /* 中间状态 */
+        }
+        100% {
+            transform: rotate(360deg); /* 结束状态 */
+        }
+        }
+        .animal {
+            animation: animation1 5s infinite; /* 应用动画，持续时间5秒，循环无限次 */
+        }
+
+
+    </style>
 </head>
+
 <body>
+    <a title="baidu" href="https://www.baidu.com/">baidu</a>
+    <a class="box">我是box</a>
+    <div class="father">
+        <p>这是大容器</p>
+        <div class="son">
+            这是小容器
+        </div>
+        <div class="son">
+            这是小容器
+        </div>
+    </div>
+    <div class="animal">
+
+    </div>
     
 </body>
 </html>

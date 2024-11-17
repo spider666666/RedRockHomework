@@ -1,11 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>九宫格图片翻转</title>
+    <style type="text/css">
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:10px;
+            background-color:red;
+            height:100vh;
+            margin:0;
+
+        }
+        .grid-container{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            grid-template-rows:repeat(3,1fr);
+            gap:10px;
+            width:600px;
+            height:600px;
+
+        }
+        .grid-item{
+            position:relative;
+            overflow:hidden;
+            cursor:pointer;
+
+        }
+        .grid-item img{
+            width:100%;
+            height:100%;
+            transition:transform 0.5s
+        }
+        .grid-item:hover img{
+            transform:scaleX(-1);
+            /*实现水平翻转*/
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="grid-container">
+        <div class="grid-item"><img src="image1.jpg" alt=""></div>
+        <div class="grid-item"><img src="image2.jpg" alt=""></div>
+        <div class="grid-item"><img src="image3.jpg" alt=""></div>
+        <div class="grid-item"><img src="image4.jpg" alt=""></div>
+        <div class="grid-item"><img src="image5.jpg" alt=""></div>
+        <div class="grid-item"><img src="image6.jpg" alt=""></div>
+        <div class="grid-item"><img src="image7.jpg" alt=""></div>
+        <div class="grid-item"><img src="image8.jpg" alt=""></div>
+        <div class="grid-item"><img src="image9.jpg" alt=""></div>
+    </div>
 </body>
 </html>

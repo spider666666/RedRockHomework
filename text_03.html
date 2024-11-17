@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css">
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;/*视口高度*/
+            margin:0;
+            padding:0;
+
+        }
+        .container{
+            display:grid;
+            /*设置网格的大小*/
+            grid-template-columns:repeat(3,1fr);
+            grid-template-rows:repeat(3,1fr);
+            gap:10px;
+            height:600px;
+            width:600px;
+            background-color:red;
+        }
+        .pic{
+            position:relative;
+            cursor:pointer;
+            overflow:hidden;
+        }
+        .pic img{
+            width:100%;
+            height:100%;   
+            transition:transform 1s;      
+        }
+        .pic:hover img{
+            
+            transform:rotate(45deg);
+            
+
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="pic"><img src="1.jpg"></div>
+        <div class="pic"><img src="2.jpg"></div>
+        <div class="pic"><img src="3.jpg"></div>
+        <div class="pic"><img src="4.jpg"></div>
+        <div class="pic"><img src="5.jpg"></div>
+        <div class="pic"><img src="6.jpg"></div>
+        <div class="pic"><img src="7.jpg"></div>
+        <div class="pic"><img src="8.jpg"></div>
+        <div class="pic"><img src="9.jpg"></div>
+        
+    </div>
     
 </body>
 </html>
