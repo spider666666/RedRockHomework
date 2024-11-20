@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        span{
+            position:relative;
+            display:inline-block;
+            color:black;
+            
+        }
+        span::after{
+            content:"";
+            position:absolute;/* 绝对的跟在span后面 */
+            left:0;/*左边对齐*/
+            bottom:-5px;/*底部留出5px的距离*/
+            width:100%;/*宽度撑满*/
+            height:2px;/*高度为4px*/
+            background:linear-gradient(to right ,red,yellow);
+            transform:scaleX(0);/*先对下划线进行隐藏*/
+            transform-origin:left;/*以左边为基准进行缩放*/
+            transition:transform 0.5s ease;/*过渡效果，这句语句的位置应该放在悬停之前*/
+            
+        }
+        span:hover::after{
+            
+            transform:scaleX(1);
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            我爱学前端!因为它是一个充满创造力和挑战的领域。通过学习前端，我可以不断探索新的技术和设计，为用户提供更好的用户体验。它让我充满激情和动力，成为一个优秀的前端工程师。
+        </span>
+    </div>
+</body>
+</html>
