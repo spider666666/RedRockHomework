@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            margin:0;
+            
+        }
+        .container{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            height:100vh;
+            position:relative;
+
+            
+        }
+        img {
+        width: 300px;
+        height: 300px;
+        transition: transform 0.5s ease; /* 修正拼写错误 这里是时间函数，慢——快——慢的变化*/
+        }
+
+        img:hover{
+            transform:scale(1.1);
+            /* box-shadow:5px 5px 10px #888888; 给图片添加阴影效果 */
+            filter:brightness(0.95);/* 将亮度降低到70%  constrast(0.9)  对比度降低到90% */
+
+
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <img id="player" src="player.png" alt="player" ><!--图片的宽度和高度是通过CSS样式设置的，而不是HTML属性。因此，CSS样式通常会优先于HTML属性。这是因为CSS的优先级更高，因此页面渲染时，浏览器会优先应用CSS中定义的宽度和高度。--> 
+    </div>
+</body>
+</html>
